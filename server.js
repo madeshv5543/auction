@@ -5,6 +5,8 @@ const path = require('path')
 
 const app = express()
 const staticFileMiddleware = express.static(path.join(__dirname, '/build'))
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 app.use(staticFileMiddleware)
 // app.use(history())
