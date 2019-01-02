@@ -14,6 +14,6 @@ app.get('/', function (req, res) {
   res.render(path.join(__dirname ,'/build'))
 })
 
-app.listen(3000, function () {
+app.listen(80, function () {
   console.log( 'Express serving on 80!' )
 })
