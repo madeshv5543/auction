@@ -4,7 +4,7 @@ const history = require('connect-history-api-fallback')
 // ^ middleware to redirect all URLs to index.html
 
 const app = express()
-const staticFileMiddleware = express.static(path.join(__dirname, '/bulid'))
+const staticFileMiddleware = express.static(path.join(__dirname, '/build'))
 
 app.use(staticFileMiddleware)
 app.use(history())
@@ -15,6 +15,6 @@ app.get('/', function (req, res) {
   res.render(path.join(__dirname ,'/build'))
 })
 
-app.listen(3000, function () {
-  console.log( 'Express serving on 5000!' )
+app.listen(80, function () {
+  console.log( 'Express serving on 80!' )
 })
