@@ -10,7 +10,7 @@ app.use(staticFileMiddleware)
 // app.use(history())
 app.use(staticFileMiddleware)
 // ^ `app.use(staticFileMiddleware)` is included twice as per https://github.com/bripkens/connect-history-api-fallback/blob/master/examples/static-files-and-index-rewrite/README.md#configuring-the-middleware
-
+app.set('view engine', 'html');
 app.get('/', function (req, res) {
   res.render(path.join(__dirname ,'/build'))
 })
